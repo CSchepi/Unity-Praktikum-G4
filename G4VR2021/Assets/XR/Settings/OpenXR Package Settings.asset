@@ -2017,7 +2017,7 @@ MonoBehaviour:
   - {fileID: 4557848887749757241}
   - {fileID: -6243372091407764351}
   - {fileID: -994820513526522269}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &6940264058582089583
 MonoBehaviour:
