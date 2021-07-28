@@ -14,8 +14,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public Button Create;
     public Button Join;
+    public Button StartenButton;
 
-  
+
     public TextMeshProUGUI nicknameInpitField;
     public TextMeshProUGUI RoomIDInputField;
     public TextMeshProUGUI RoomIDDisplay;
@@ -32,6 +33,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         MainMenue.gameObject.SetActive(false);
         RoomMenue.gameObject.SetActive(false);
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.GameVersion = Game_Version;
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Verbinde zum Maser");
@@ -53,7 +55,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void JoinExistingRoom()
     {
-        if(nicknameInpitField.text == "") { nicknameInpitField.text = "Anonym"; }
+        //if(nicknameInpitField.text == "") { nicknameInpitField.text = "Anonym"; }
         PhotonNetwork.NickName = (nicknameInpitField.text);
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
@@ -64,12 +66,24 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             RoomOptions roomops = new RoomOptions();
             roomops.MaxPlayers = 5;
-            PhotonNetwork.CreateRoom((""+Random.RandomRange(1000, 9999)));
+            PhotonNetwork.CreateRoom("#" + Random.RandomRange(1000, 9999));
         }
         else
         {
-            PhotonNetwork.JoinRoom(RoomIDInputField.text);
+            string roomname = RoomIDInputField.text.ToString();
+            string roomname2 = "";
+            for (int i = 0; i < 5; i++)
+            {
+                roomname2 += roomname[i];
+            }
+            Debug.Log(roomname2 + ", " + roomname2.Length);
+            PhotonNetwork.JoinRoom(roomname2);
         }
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        Debug.Log("Faild:" + message);
     }
 
     public override void OnJoinedRoom()
@@ -77,7 +91,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomIDDisplay.text = PhotonNetwork.CurrentRoom.Name;
         MainMenue.gameObject.SetActive(false);
         RoomMenue.gameObject.SetActive(true);
-        Debug.Log("Room beigetreten!");
+        Debug.Log("Room beigetreten!" + PhotonNetwork.CurrentRoom.Name);
         create = false;
         updatePlayers();
     }
@@ -90,8 +104,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private void updatePlayers()
     {
         int numP = PhotonNetwork.CurrentRoom.PlayerCount;
-        for(int i = 1; i<= numP; i++)
+        Debug.Log(numP);
+        if (numP == 2)
         {
+            StartenButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            StartenButton.gameObject.SetActive(false);
+        }
+        for (int i = 1; i <= numP; i++)
+        {
+
             Player player = PhotonNetwork.CurrentRoom.Players[i];
             string pname = player.NickName;
             if (player.IsLocal)
@@ -103,7 +127,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             {
                 P1Name.text = pname;
             }
-            if (i == 2)
+            else if (i == 2)
             {
 
                 P2Name.text = pname;
@@ -112,6 +136,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             {
                 Debug.Log("Zu viele Spieler");
             }
+        }
+    }
+
+    public void StartGameClick(string sceneName)
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel(sceneName);
         }
     }
 
