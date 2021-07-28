@@ -31,7 +31,20 @@ public class PhysicsButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!_isPressed && GetValue() + threshold >= 1)
+            Pressed();
+        if (_isPressed && GetValue() - threshold <=0)
+                Released();      
+    }
+
+    private float GetValue() 
+    {
+        var value = Vector3.Distance(_startPos, transform.localPosition) / _joint.linearLimit.limit;
+
+        if (Mathf.Abs(value) < deadZone)
+            value = 0;
+
+        return Mathf.Clamp(value, -1f, 1f);
     }
 
     private void Pressed()
@@ -39,6 +52,14 @@ public class PhysicsButton : MonoBehaviour
         _isPressed = true;
         onPressed.Invoke();
         Debug.Log("Button Pressed");
+
+    }
+
+    private void Released()
+    {
+        _isPressed = false;
+        onPressed.Invoke();
+        Debug.Log("Button Released");
 
     }
 
