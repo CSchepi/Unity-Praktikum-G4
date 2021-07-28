@@ -63,8 +63,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (create)
         {
             RoomOptions roomops = new RoomOptions();
-            roomops.MaxPlayers = 2;
-            PhotonNetwork.CreateRoom(("#"+Random.RandomRange(1000, 9999)));
+            roomops.MaxPlayers = 5;
+            PhotonNetwork.CreateRoom((""+Random.RandomRange(1000, 9999)));
         }
         else
         {
