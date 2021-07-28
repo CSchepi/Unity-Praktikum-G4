@@ -3,7 +3,7 @@ PUN 2 - Changelog
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-v2.34.1 (26. July 2021)
+v2.34.1 (28. July 2021)
 Updated: PhotonNetwork.PunVersion to "2.34.1" now. The previous version accidentally used "2.33.3" still.
 Updated: For Unity 2021, the obsoltete CompilationPipeline.assemblyCompilationStarted got replaced with CompilationPipeline.compilationStarted.
 
