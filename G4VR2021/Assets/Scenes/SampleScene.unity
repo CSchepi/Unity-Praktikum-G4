@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.030325068, g: 0.020160977, b: 0.06161584, a: 1}
+  m_IndirectSpecularColor: {r: 0.038141184, g: 0.017843205, b: 0.06331235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -629,7 +629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 6
 --- !u!1 &327603061
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +867,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 1
+--- !u!4 &408844186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4606904589785635969, guid: 5cbe2717c614e174785b163649766e65, type: 3}
+  m_PrefabInstance: {fileID: 1816552366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424942196
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threshold: 0.1
   deadZone: 0.025
+  lasers: {fileID: 1678268467}
+  audio: {fileID: 2074767395}
   onPressed:
     m_PersistentCalls:
       m_Calls: []
@@ -994,7 +999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 2
 --- !u!43 &526590545
 Mesh:
   m_ObjectHideFlags: 0
@@ -1683,7 +1687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-613310
+  m_Name: pb_Mesh-565244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3112,7 +3116,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-613296
+  m_Name: pb_Mesh-565230
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3287,7 +3291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 4
 --- !u!1 &1419437687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,7 +3338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 3
 --- !u!43 &1606569568
 Mesh:
   m_ObjectHideFlags: 0
@@ -4145,6 +4147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f5a9302d219aec419fd14d18fcff19c, type: 3}
+--- !u!1 &1678268467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3032302949691755590, guid: b12b16d4a9f4976408f5a6dc2de62eda, type: 3}
+  m_PrefabInstance: {fileID: 2103858492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1679863767
 Mesh:
   m_ObjectHideFlags: 0
@@ -4331,7 +4338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9840e0cdc43af746be55f7b628b522f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PotPin: 1234
 --- !u!1001 &1787879588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4430,7 +4436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionColorCode: 5
 --- !u!1001 &1816552366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4438,10 +4443,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4606904588163416104, guid: 5cbe2717c614e174785b163649766e65, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4606904588163416105, guid: 5cbe2717c614e174785b163649766e65, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 1.9999824
       objectReference: {fileID: 0}
+    - target: {fileID: 4606904588447915906, guid: 5cbe2717c614e174785b163649766e65, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c14837dfa515883428e5652d93e80c72, type: 2}
+    - target: {fileID: 4606904589721097266, guid: 5cbe2717c614e174785b163649766e65, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cdcec2345c1d1af4da10b1c5d9cbff65, type: 2}
     - target: {fileID: 4606904589785635969, guid: 5cbe2717c614e174785b163649766e65, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4662,7 +4679,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-613338
+  m_Name: pb_Mesh-565272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4820,13 +4837,140 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2074767393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074767394}
+  - component: {fileID: 2074767395}
+  m_Layer: 0
+  m_Name: button_click
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074767394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074767393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 408844186}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2074767395
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074767393}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2f3e92cba0535684c8b80b7df2db09a3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.03
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!43 &2092148871
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-613324
+  m_Name: pb_Mesh-565258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11228,7 +11372,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11352,7 +11496,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11476,7 +11620,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11600,7 +11744,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11724,7 +11868,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11860,7 +12004,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11984,7 +12128,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

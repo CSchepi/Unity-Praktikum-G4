@@ -5,17 +5,15 @@ using UnityEngine.Events;
 
 public class PhysicsButton : MonoBehaviour
 {
-
-
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadZone = 0.025f;
+
+    [SerializeField] GameObject lasers;
+    [SerializeField] AudioSource audio;
 
     private bool _isPressed;
     private Vector3 _startPos;
     private ConfigurableJoint _joint;
-
-
-
 
     public UnityEvent onPressed, onReleased;
 
@@ -24,8 +22,6 @@ public class PhysicsButton : MonoBehaviour
     {
         _startPos = transform.localPosition;
         _joint = GetComponent<ConfigurableJoint>();
-
-        
     }
 
     // Update is called once per frame
@@ -51,7 +47,8 @@ public class PhysicsButton : MonoBehaviour
     {
         _isPressed = true;
         onPressed.Invoke();
-        Debug.Log("Button Pressed");
+        audio.Play();
+        lasers.SetActive(false);
 
     }
 
@@ -59,10 +56,5 @@ public class PhysicsButton : MonoBehaviour
     {
         _isPressed = false;
         onPressed.Invoke();
-        Debug.Log("Button Released");
-
     }
-
-
-
 }
