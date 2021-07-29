@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3032302949691755589}
+  - component: {fileID: 8117392648672994327}
+  - component: {fileID: 3602085459277255917}
   m_Layer: 0
   m_Name: Lasers
   m_TagString: Untagged
@@ -37,6 +39,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8117392648672994327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3032302949691755590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 43.360435, y: 9.702611, z: 1}
+  m_Center: {x: 21.180225, y: 3.5864022, z: 0}
+--- !u!65 &3602085459277255917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3032302949691755590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5807203, y: 1.4824646, z: 11.076146}
+  m_Center: {x: 29.46273, y: 0.24123256, z: 4.732895}
 --- !u!1001 &707928472885812098
 PrefabInstance:
   m_ObjectHideFlags: 0

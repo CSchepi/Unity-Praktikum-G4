@@ -11,8 +11,8 @@ public class ManagerChechInput : MonoBehaviour
     public int pin = 195836;
     public string input;
     private bool pinWasGuessed;
-    //public GameObject DoorLeft;
-    //public GameObject DoorRight;
+
+    public AudioSource audio;
 
     enum LidState
     {
@@ -27,8 +27,6 @@ public class ManagerChechInput : MonoBehaviour
     public Transform hinge;
 
     public float openSpeed = 1f;
-    //SerializeField startAngle;
-    //SerializeField endAngle;
 
     public float startAngle = 0f;
     public float endAngle = -90f;
@@ -51,6 +49,8 @@ public class ManagerChechInput : MonoBehaviour
         chestState = initial;
 
         float time = 0f;
+        audio.Play();
+
         while (time <= 1f)
         {
             // Calculate currrent angle
@@ -67,6 +67,7 @@ public class ManagerChechInput : MonoBehaviour
 
             // Increment time
             time = time + Time.deltaTime / openSpeed;
+
 
             yield return null;
 
@@ -113,8 +114,6 @@ public class ManagerChechInput : MonoBehaviour
                 Debug.Log("Entered if");
                 txt.GetComponent<Text>().text = "Pin is correct!";
                 pinWasGuessed = true;
-                //DoorLeft.GetComponent<OpenLiftDoor>()._openDoor();
-                //DoorRight.GetComponent<OpenLiftDoor>()._openDoor();
 
                 OpenChest();
                 return;
