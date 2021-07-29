@@ -17,6 +17,12 @@ public class rock : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<BreakableWindow>().breakWindow();
+        var Glass=other.gameObject.GetComponent<BreakGlass>();
+        if (Glass == null)
+        {
+            return;
+        }
+        Glass.Hp -= 10;
+        
     }
 }
