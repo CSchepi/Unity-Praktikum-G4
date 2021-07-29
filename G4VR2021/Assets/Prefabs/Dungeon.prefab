@@ -2755,6 +2755,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6352758923909409712, guid: 616fdaa7dbff40e4f91c695be15f9f4f, type: 3}
+      propertyPath: PotPin
+      value: 5214
+      objectReference: {fileID: 0}
     - target: {fileID: 6914334235229616240, guid: 616fdaa7dbff40e4f91c695be15f9f4f, type: 3}
       propertyPath: m_IsActive
       value: 1
