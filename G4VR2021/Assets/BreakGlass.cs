@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrashGlass : MonoBehaviour
+public class BreakGlass : MonoBehaviour
 {
     AudioSource Glass;
     public int Hp=30;
@@ -14,7 +14,7 @@ public class CrashGlass : MonoBehaviour
     }
     void start()
     {
-        Glass= GetComponent<AudioSource>();
+        
         Glass.Stop();
     }
 
@@ -23,6 +23,7 @@ public class CrashGlass : MonoBehaviour
     {
         if(Hp<=0)
         {
+            Glass= GetComponent<AudioSource>();
             Glass.Play();
             Debug.Log("Glass crushed");
             Destroy(gameObject);
