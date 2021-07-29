@@ -60,7 +60,7 @@ public class ChestCheckInput : MonoBehaviour
             Vector3 euler = hinge.eulerAngles;
 
             // Set current angle
-            euler.x = angle;
+            euler.z = angle;
 
             // Reapply Euler angles to transform
             hinge.eulerAngles = euler;
