@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.030325068, g: 0.020160977, b: 0.06161584, a: 1}
+  m_IndirectSpecularColor: {r: 0.028217046, g: 0.017587237, b: 0.059675436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1220,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &604084920
 Transform:
   m_ObjectHideFlags: 0
@@ -3069,6 +3069,63 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+--- !u!1001 &1239221603
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9012125237910265260, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_Name
+      value: Network Logic
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.99403
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.584951
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -62.83488
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012125237910265262, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5bc4ed18e45d1e4ca890721ad947aca, type: 3}
 --- !u!1 &1332976480
 GameObject:
   m_ObjectHideFlags: 0
