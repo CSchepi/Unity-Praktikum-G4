@@ -120,7 +120,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             string pname = player.NickName;
             if (player.IsLocal)
             {
+                
                 pname += " [you]";
+            }
+            if (player.IsMasterClient)
+            {
+
+                pname += " [VR]";
+            }
+            else
+            {
+
+                pname += " [non-VR]";
             }
             Debug.Log(pname);
             if (i == 1)
