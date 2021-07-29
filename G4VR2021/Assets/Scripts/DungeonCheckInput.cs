@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class ManagerChechInput : MonoBehaviour
+public class DungeonCheckInput : MonoBehaviour
 {
     Text displayInput;
     public Text txt;
-    public int pin = 195836;
+    public string pin = "YODA";
     public string input;
     private bool pinWasGuessed;
     //public GameObject DoorLeft;
@@ -31,7 +31,7 @@ public class ManagerChechInput : MonoBehaviour
     //SerializeField endAngle;
 
     public float startAngle = 0f;
-    public float endAngle = -90f;
+    public float endAngle = -40f;
 
 
     public void OpenChest()
@@ -97,20 +97,17 @@ public class ManagerChechInput : MonoBehaviour
 
     private void checkIfInputLenghtIs6()
     {
-        if (input.Length < 6)
+        if (input.Length < 4)
         {
             return;
         }
 
-        else if (input.Length == 6)
+        else if (input.Length == 4)
         {
             //check if pin is correct
-
-            int enteredPin = Int32.Parse(input);
-            Debug.Log(enteredPin);
-            if (enteredPin == pin)
+            //int enteredPin = Int32.Parse(input);
+            if (input == pin)
             {
-                Debug.Log("Entered if");
                 txt.GetComponent<Text>().text = "Pin is correct!";
                 pinWasGuessed = true;
                 //DoorLeft.GetComponent<OpenLiftDoor>()._openDoor();
@@ -121,8 +118,6 @@ public class ManagerChechInput : MonoBehaviour
             }
             else
             {
-                Debug.Log("Entered if");
-
                 txt.GetComponent<Text>().text = "Pin is incorrect! Try again...";
                 input = "";
                 displayInput.text = input;

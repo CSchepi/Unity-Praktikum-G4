@@ -10,11 +10,17 @@ public class DungeonPot : MonoBehaviour
     public GameObject potSmoke_CorrectPin;
     public GameObject prefabBottles;
 
+    public GameObject SecurityCameras;
+    public GameObject VaultLight;
+
     string input;
 
     void Start()
     {
         potionWasGuessed = false;
+        
+        if (VaultLight == null)  VaultLight = GameObject.FindWithTag("VaultLight");
+        if (SecurityCameras == null) SecurityCameras = GameObject.FindWithTag("SecurityCameras");
     }
 
     void OnTriggerEnter(Collider col)
@@ -38,6 +44,9 @@ public class DungeonPot : MonoBehaviour
                 Debug.Log("Potion order is correct");
                 potSmoke.SetActive(false);
                 potSmoke_CorrectPin.SetActive(true);
+                //set Vault lighting
+                VaultLight.SetActive(true);
+                SecurityCameras.SetActive(false);
                 return;
             }
             else 
@@ -45,10 +54,10 @@ public class DungeonPot : MonoBehaviour
                 input = "";
                 //Re-instantiate potions once the order is not correct
                 Instantiate(prefabBottles, new Vector3(-40.2f, 8.8f, -29.2f), Quaternion.identity);
-                
                 Debug.Log("Potion order is incorrect");
                 return;
             }  
         }
     }
 }
+
