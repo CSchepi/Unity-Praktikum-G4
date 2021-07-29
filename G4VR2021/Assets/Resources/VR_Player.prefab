@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5826889445566933240}
   - component: {fileID: 5826889445566933241}
   - component: {fileID: 5826889445566933246}
-  - component: {fileID: 5826889445566933247}
+  - component: {fileID: 4784119838423302827}
   m_Layer: 0
   m_Name: VR_Player
   m_TagString: Untagged
@@ -87,9 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logLevel: 3
   ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 5826889445566933247}
+  recorderInUse: {fileID: 0}
   speakerInUse: {fileID: 5826889445566933246}
-  AutoCreateRecorderIfNotFound: 0
+  AutoCreateRecorderIfNotFound: 1
   UsePrimaryRecorder: 0
   SetupDebugSpeaker: 0
 --- !u!82 &5826889445566933241
@@ -208,7 +208,7 @@ MonoBehaviour:
     MinDelaySoft: 200
     MaxDelaySoft: 400
     MaxDelayHard: 1000
---- !u!114 &5826889445566933247
+--- !u!114 &4784119838423302827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 0
   reliableMode: 0

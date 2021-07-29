@@ -33,7 +33,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         MainMenue.gameObject.SetActive(false);
         RoomMenue.gameObject.SetActive(false);
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = false;
         PhotonNetwork.GameVersion = Game_Version;
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Verbinde zum Maser");
@@ -141,10 +141,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void StartGameClick(string sceneName)
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
             PhotonNetwork.LoadLevel(sceneName);
-        }
     }
 
 }
