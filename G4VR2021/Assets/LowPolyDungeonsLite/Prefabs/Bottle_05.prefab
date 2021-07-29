@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1027090182464138263}
   - component: {fileID: 8952890746214563404}
   - component: {fileID: 8952890746214563405}
+  - component: {fileID: 5222773476048580525}
   m_Layer: 0
   m_Name: Bottle_05
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18f63ff904099034daf971dac5b32582, type: 2}
+  - {fileID: 2100000, guid: 7595218a43c104a43b6c67c384dcd43b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -221,3 +222,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5222773476048580525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374151818356740834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e7991b42d89c545905109da3109aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionColorCode: 1

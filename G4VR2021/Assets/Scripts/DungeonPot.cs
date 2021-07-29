@@ -5,13 +5,16 @@ using UnityEngine;
 public class DungeonPot : MonoBehaviour
 {
     public string PotPin;
-    private bool potionIsGuessed;
+    private bool potionWasGuessed;
+    public GameObject potSmoke;
+    public GameObject potSmoke_CorrectPin;
+    public GameObject prefabBottles;
 
     string input;
 
     void Start()
     {
-        potionIsGuessed = false;
+        potionWasGuessed = false;
     }
 
     void OnTriggerEnter(Collider col)
@@ -31,14 +34,18 @@ public class DungeonPot : MonoBehaviour
         {
             if(input.Equals(PotPin))
             {
-                potionIsGuessed = true;
+                potionWasGuessed = true;
                 Debug.Log("Potion order is correct");
+                potSmoke.SetActive(false);
+                potSmoke_CorrectPin.SetActive(true);
                 return;
             }
             else 
             {
-                //toDo reinstantiate Potions;
                 input = "";
+                //Re-instantiate potions once the order is not correct
+                Instantiate(prefabBottles, new Vector3(-40.2f, 8.8f, -29.2f), Quaternion.identity);
+                
                 Debug.Log("Potion order is incorrect");
                 return;
             }  
