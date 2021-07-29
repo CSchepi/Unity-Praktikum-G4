@@ -1006,7 +1006,7 @@ Transform:
   m_GameObject: {fileID: 764510703535556041}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -56.27999, y: -0.04146321, z: -94.81193}
-  m_LocalScale: {x: 4, y: 1.5, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 764510703914628236}
   - {fileID: 8888430956395559410}
@@ -2383,7 +2383,6 @@ GameObject:
   - component: {fileID: 8103722512667498765}
   - component: {fileID: 8103722512667498763}
   - component: {fileID: 8103722512667498762}
-  - component: {fileID: 8103722512667498760}
   - component: {fileID: 8103722514106386036}
   m_Layer: 5
   m_Name: InputText
@@ -2453,23 +2452,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: _ _ _ _ _ _
---- !u!114 &8103722512667498760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8103722512667498764}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684253dc116236b4e994f43f24676aa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txt: {fileID: 764510704001366649}
-  pin: 1234
-  input: 
-  DoorLeft: {fileID: 0}
-  DoorRight: {fileID: 0}
 --- !u!114 &8103722514106386036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,13 +2464,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3834f531cf6ffb4bbc16245f6550d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 0}
+  txt: {fileID: 764510704001366649}
   pin: 195836
   input: 
   hinge: {fileID: 0}
   openSpeed: 1
-  startAngle: 0
-  endAngle: 90
+  startAngle: -90
+  endAngle: 0
 --- !u!1 &8888430956395559413
 GameObject:
   m_ObjectHideFlags: 0

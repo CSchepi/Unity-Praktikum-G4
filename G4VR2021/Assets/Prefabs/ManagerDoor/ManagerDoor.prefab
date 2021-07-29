@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4422525020083306659}
+  - component: {fileID: 3289559517345556161}
   m_Layer: 0
   m_Name: ManagerDoor
   m_TagString: Untagged
@@ -23,14 +24,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036794125848810410}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -43.719994, y: -0.38698208, z: -96.676674}
-  m_LocalScale: {x: 2.9599314, y: 1.3820754, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7764738211916977326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &3289559517345556161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036794125848810410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5096204, y: 3.1814451, z: 1.4045404}
+  m_Center: {x: -0.05389273, y: -0.049188137, z: -0.75302124}
 --- !u!1001 &7768671292841649550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4003471584882976, guid: 1f5a9302d219aec419fd14d18fcff19c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5522995
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 4003471584882976, guid: 1f5a9302d219aec419fd14d18fcff19c, type: 3}
       propertyPath: m_LocalPosition.z
