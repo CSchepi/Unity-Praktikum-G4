@@ -14,6 +14,7 @@ public class ManagerChechInput : MonoBehaviour
     //public GameObject DoorLeft;
     //public GameObject DoorRight;
 
+    enum LidState
     {
         Closed,
         Opening,
