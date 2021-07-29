@@ -14426,6 +14426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6922022029657128398, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.85
+      objectReference: {fileID: 0}
     - target: {fileID: 6944577490479021738, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.09
@@ -16814,7 +16818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &4791483433064326346
 BoxCollider:
   m_ObjectHideFlags: 0
