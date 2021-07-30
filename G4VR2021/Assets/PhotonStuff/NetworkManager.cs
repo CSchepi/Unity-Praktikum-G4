@@ -118,21 +118,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
             Player player = PhotonNetwork.CurrentRoom.Players[i];
             string pname = player.NickName;
+            if (player.IsMasterClient)
+            {
+
+                pname += "The VR Player";
+            }
+            else
+            {
+
+                pname += "The non-VR Player";
+            }
             if (player.IsLocal)
             {
                 
                 pname += " [you]";
             }
-            if (player.IsMasterClient)
-            {
-
-                pname += " [VR]";
-            }
-            else
-            {
-
-                pname += " [non-VR]";
-            }
+            
             Debug.Log(pname);
             if (i == 1)
             {
