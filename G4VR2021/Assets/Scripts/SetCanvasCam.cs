@@ -8,7 +8,7 @@ public class SetCanvasCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        VRCam = GameObject.FindWithTag("VRCam").GetComponent<Camera>();
+        VRCam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         Canvas c = this.GetComponent<Canvas>();
         c.worldCamera = VRCam;
     }
