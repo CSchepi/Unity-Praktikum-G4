@@ -106,7 +106,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         int numP = PhotonNetwork.CurrentRoom.PlayerCount;
         Debug.Log(numP);
-        if (numP == 2)
+        if (numP == 2 && PhotonNetwork.IsMasterClient)
         {
             StartenButton.gameObject.SetActive(true);
         }
