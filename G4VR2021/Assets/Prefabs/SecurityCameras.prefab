@@ -198,9 +198,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310040910417574997}
+  - component: {fileID: 4988694167006553498}
   m_Layer: 0
   m_Name: SecurityCameras
-  m_TagString: Untagged
+  m_TagString: SecurityCameras
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,6 +227,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4988694167006553498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738633409114150841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.974691, y: 5.948362, z: 14.632083}
+  m_Center: {x: -6.487349, y: -2.474181, z: 2.7434645}
 --- !u!1 &2230135022637681322
 GameObject:
   m_ObjectHideFlags: 0
