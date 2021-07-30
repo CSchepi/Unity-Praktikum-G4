@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9840e0cdc43af746be55f7b628b522f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PotPin: 1546
+  PotPin: 5214
   potSmoke: {fileID: 6914334235229616240}
   potSmoke_CorrectPin: {fileID: 6318646093677098715}
   prefabBottles: {fileID: 3036272641492123565, guid: 60edd21e7ad1ce94f8b01eab4ee156d1, type: 3}

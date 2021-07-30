@@ -6,7 +6,8 @@ public class Bottles : MonoBehaviour
 {
     void Update()
     {
-        if (transform.childCount < 1){
+        if (transform.childCount < 3)
+        {
             Destroy(this.gameObject);
         }
     }
