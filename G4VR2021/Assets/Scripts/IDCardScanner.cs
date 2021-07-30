@@ -6,67 +6,14 @@ using UnityEngine.UI;
 public class IDCardScanner : MonoBehaviour
 {
     public GameObject image;
+    public GameObject door;
+    public GameObject Collider;
 
-    enum LidState
+    void Start()
     {
-        Closed,
-        Opening,
-        Closing,
-        Open
-    }
-
-    LidState chestState = LidState.Closed;
-
-    public Transform hinge;
-
-    public float openSpeed = 1f;
-
-    public float startAngle = 0f;
-    public float endAngle = -90f;
-
-
-    public void OpenChest()
-    {
-        if (chestState == LidState.Closed)
-            StartCoroutine(ToggleChest(startAngle, endAngle, LidState.Opening, LidState.Open));
-    }
-
-    public void CloseChest()
-    {
-        if (chestState == LidState.Closed)
-            StartCoroutine(ToggleChest(endAngle, startAngle, LidState.Opening, LidState.Open));
-    }
-
-    IEnumerator ToggleChest(float angleStart, float angleEnd, LidState initial, LidState complete)
-    {
-        chestState = initial;
-
-        float time = 0f;
-        GetComponent<AudioSource>().Play();
-
-        while (time <= 1f)
-        {
-            // Calculate currrent angle
-            float angle = Mathf.Lerp(angleStart, angleEnd, time);
-
-            //Get a copy of current Euler angles
-            Vector3 euler = hinge.eulerAngles;
-
-            // Set current angle
-            euler.y = angle;
-
-            // Reapply Euler angles to transform
-            hinge.eulerAngles = euler;
-
-            // Increment time
-            time = time + Time.deltaTime / openSpeed;
-
-
-            yield return null;
-
-        }
-
-        chestState = complete;
+        door.GetComponent<Rigidbody>().isKinematic = true;
+        door.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>().enabled = false;
+        Collider.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -77,7 +24,7 @@ public class IDCardScanner : MonoBehaviour
         {
             image.GetComponent<Image>().color = Color.green;
             Debug.Log("Card scanner touched.");
-            OpenChest();
+            UnlockDoor();
         } 
         else 
         {
@@ -91,5 +38,12 @@ public class IDCardScanner : MonoBehaviour
         yield return new WaitForSeconds(3);
         image.GetComponent<Image>().color = Color.white;
 
+    }
+
+    private void UnlockDoor()
+    {
+        door.GetComponent<Rigidbody>().isKinematic = false;
+        door.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>().enabled = true;
+        Collider.SetActive(false);
     }
 }

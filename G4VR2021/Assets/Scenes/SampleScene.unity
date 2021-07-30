@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.028041158, g: 0.01763974, b: 0.05949978, a: 1}
+  m_IndirectSpecularColor: {r: 0.030325068, g: 0.020160977, b: 0.06161584, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3617,6 +3617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (3) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3975599579000899707, guid: 22510dc748d1ad64ba72c8e8a93c310a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4018917181431800252, guid: 22510dc748d1ad64ba72c8e8a93c310a, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -76.54
@@ -4615,6 +4619,14 @@ PrefabInstance:
       propertyPath: lasers
       value: 
       objectReference: {fileID: 1678268467}
+    - target: {fileID: 956729379284410681, guid: c06252dba9067074ca535ee79f204646, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 875629082}
+    - target: {fileID: 956729379284410681, guid: c06252dba9067074ca535ee79f204646, type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 1874727670}
     - target: {fileID: 956729380647811840, guid: c06252dba9067074ca535ee79f204646, type: 3}
       propertyPath: m_Name
       value: SceneItems
@@ -6638,6 +6650,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2bd5687252439b4fa666cb506c58452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &875629082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3975599579000899707, guid: 22510dc748d1ad64ba72c8e8a93c310a, type: 3}
+  m_PrefabInstance: {fileID: 7868582021260354640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &881145391
 GameObject:
   m_ObjectHideFlags: 0
@@ -14457,6 +14474,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1874727670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3506557156720971061, guid: c06252dba9067074ca535ee79f204646, type: 3}
+  m_PrefabInstance: {fileID: 659912591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911954884
 GameObject:
   m_ObjectHideFlags: 0
@@ -24219,43 +24241,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6918681887868310056, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6918755223864129276, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6918947729258868666, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6918986496223534298, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919049385123016538, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919107592214336974, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919112125641856242, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919456499474351780, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919640059367631504, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6919766282427389860, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6922022029657128398, guid: 8c82fa5b024a8794c9333ffeb670ff2f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25160,6 +25182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952691
 AudioSource:
@@ -25269,6 +25292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952693
 AudioSource:
@@ -25378,6 +25402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952695
 AudioSource:
@@ -25487,6 +25512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952697
 AudioSource:
@@ -25596,6 +25622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952699
 AudioSource:
@@ -25705,6 +25732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!114 &3672147206471952701
 MonoBehaviour:
@@ -25718,6 +25746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fca9691a92cc2438c81ee11db1f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakingGlass: {fileID: 0}
   Hp: 30
 --- !u!82 &3672147206471952702
 AudioSource:
