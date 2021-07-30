@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841972353011291494}
   m_LocalRotation: {x: -0, y: -0, z: 0.7050966, w: 0.70911133}
-  m_LocalPosition: {x: -55.329, y: -2.4222355, z: -11.4816}
+  m_LocalPosition: {x: -31.26, y: -2.4222355, z: -13.52}
   m_LocalScale: {x: 0.01, y: 1.114144, z: 0.9861311}
   m_Children: []
   m_Father: {fileID: 2841972353748936662}
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 2841972353748936660}
   - component: {fileID: 2841972353748936661}
   - component: {fileID: 2841972353748936681}
+  - component: {fileID: 1281369944960717874}
   m_Layer: 0
   m_Name: IDCard Scanner
   m_TagString: Untagged
@@ -528,6 +529,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2841972353825093423}
+--- !u!114 &1281369944960717874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841972353748936658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3834f531cf6ffb4bbc16245f6550d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  pin: 195836
+  input: 
+  audio: {fileID: 0}
+  hinge: {fileID: 0}
+  openSpeed: 1
+  startAngle: 0
+  endAngle: -90
 --- !u!1 &2841972353825093423
 GameObject:
   m_ObjectHideFlags: 0
