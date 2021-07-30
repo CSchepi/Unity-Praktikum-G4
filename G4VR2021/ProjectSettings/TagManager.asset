@@ -15,6 +15,14 @@ TagManager:
   - Potion
   - SecurityCameras
   - VaultLight
+<<<<<<< Updated upstream
+=======
+  - nonVRCam
+  - VRCam
+  - VRUI
+  - nonVRUI
+  - EscapeCube
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

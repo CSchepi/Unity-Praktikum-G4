@@ -35,6 +35,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         RoomMenue.gameObject.SetActive(false);
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.GameVersion = Game_Version;
+        PhotonNetwork.LeaveRoom();
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Verbinde zum Maser");
     }
