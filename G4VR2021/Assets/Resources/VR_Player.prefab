@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297630399409559465}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
@@ -54,7 +54,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 3413842085568237829}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5627747575619555126}
         m_TargetAssemblyTypeName: UIVR, Assembly-CSharp
         m_MethodName: leave
         m_Mode: 1
@@ -1230,6 +1230,7 @@ GameObject:
   - component: {fileID: 3413842085568237829}
   - component: {fileID: 3413842085568237828}
   - component: {fileID: 3413842085568237831}
+  - component: {fileID: 3494219000546852748}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: VRCam
@@ -1348,6 +1349,18 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Main Camera - TPD - Rotation
       m_Flags: 0
+--- !u!114 &3494219000546852748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413842085568237830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66aa0bf8a43b8140a8aa4b61c702421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3413842085571843627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1380,6 @@ GameObject:
   - component: {fileID: 4301219439601571997}
   - component: {fileID: 835415039841355470}
   - component: {fileID: -8201345627498647143}
-  - component: {fileID: 6122823697947568017}
   - component: {fileID: 5627747575619555126}
   m_Layer: 7
   m_Name: VR_Player
@@ -1648,7 +1660,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 0
   reliableMode: 0
@@ -1680,18 +1692,6 @@ MonoBehaviour:
   trySamplingRateMatch: 0
   useMicrophoneTypeFallback: 1
   recordOnlyWhenJoined: 1
---- !u!114 &6122823697947568017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3413842085571843627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e66aa0bf8a43b8140a8aa4b61c702421, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5627747575619555126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,7 +4629,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5627747575619555126}
         m_TargetAssemblyTypeName: UIVR, Assembly-CSharp
         m_MethodName: continueGame
         m_Mode: 1
@@ -4695,7 +4695,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 3413842085568237829}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4886,7 +4886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5627747575619555126}
         m_TargetAssemblyTypeName: UIVR, Assembly-CSharp
         m_MethodName: leave
         m_Mode: 1
