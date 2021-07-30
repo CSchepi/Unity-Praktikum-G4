@@ -53,7 +53,7 @@ public class DungeonPot : MonoBehaviour
             {
                 input = "";
                 //Re-instantiate potions once the order is not correct
-                Instantiate(prefabBottles, new Vector3(-40.2f, 8.8f, -29.2f), Quaternion.identity);
+                Instantiate(prefabBottles, new Vector3(-40.2f, 8.8f, -26.2f), Quaternion.identity);
                 Debug.Log("Potion order is incorrect");
                 return;
             }  
