@@ -13,6 +13,8 @@ TagManager:
   - button f6
   - IDCard
   - Potion
+  - SecurityCameras
+  - VaultLight
   layers:
   - Default
   - TransparentFX
@@ -22,8 +24,8 @@ TagManager:
   - UI
   - UI1
   - Avoid Raycast (not grabbable)
-  - 
-  - 
+  - Player
+  - Interactable Items
   - 
   - 
   - 
