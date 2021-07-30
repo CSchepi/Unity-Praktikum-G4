@@ -25,7 +25,9 @@ public class InitPlayers : MonoBehaviour
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate("VR_Player", transform.position, Quaternion.identity, 0);
+            Vector3 SpawnVR = new Vector3(-29f,16.6f,-19f);
+            Quaternion SpawnVRRot = Quaternion.Euler(0,180,0);
+            PhotonNetwork.Instantiate("VR_Player", SpawnVR , SpawnVRRot, 0);
             GameObject wrongCam = GameObject.Find("VRCAM");
             wrongCam.SetActive(true);
         }
