@@ -4627,6 +4627,14 @@ PrefabInstance:
       propertyPath: Collider
       value: 
       objectReference: {fileID: 1874727670}
+    - target: {fileID: 956729379620836265, guid: c06252dba9067074ca535ee79f204646, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 956729379620836265, guid: c06252dba9067074ca535ee79f204646, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13
+      objectReference: {fileID: 0}
     - target: {fileID: 956729380647811840, guid: c06252dba9067074ca535ee79f204646, type: 3}
       propertyPath: m_Name
       value: SceneItems
@@ -11423,7 +11431,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh163336
+  m_Name: pb_Mesh213932
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17446,7 +17454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476236205295134833, guid: 5adcaf9b7bfe56d4485db26d01d49726, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 476236205295134834, guid: 5adcaf9b7bfe56d4485db26d01d49726, type: 3}
       propertyPath: m_Name
@@ -17462,7 +17470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476236205295134837, guid: 5adcaf9b7bfe56d4485db26d01d49726, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 476236205295134837, guid: 5adcaf9b7bfe56d4485db26d01d49726, type: 3}
       propertyPath: m_IsKinematic
