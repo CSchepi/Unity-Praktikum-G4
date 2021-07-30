@@ -5,7 +5,7 @@ using UnityEngine;
 public class BreakGlass : MonoBehaviour
 {
     public AudioClip BreakingGlass;
-    
+    public ParticleSystem pars;
     public int Hp=30;
     // Start is called before the first frame update
     void Awake()
@@ -15,7 +15,7 @@ public class BreakGlass : MonoBehaviour
     }
     void start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class BreakGlass : MonoBehaviour
             Debug.Log("Glass crushed");
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(BreakingGlass,Vector3.zero);
-            
+            pars.Play();
         }
     }
 }
