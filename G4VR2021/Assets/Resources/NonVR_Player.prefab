@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 6138799595402282546}
   - component: {fileID: 6138799595402282547}
   - component: {fileID: 5902800824069355759}
+  - component: {fileID: 7633735081617602224}
   m_Layer: 0
   m_Name: NonVRCAM
   m_TagString: nonVRCam
@@ -1028,6 +1029,18 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &7633735081617602224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138799595402282545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f6de059ca5e864d883815f514644d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6138799595986503410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1055,6 @@ GameObject:
   - component: {fileID: 6138799595986503417}
   - component: {fileID: 6138799595986503422}
   - component: {fileID: 7954985805247402741}
-  - component: {fileID: 1300663175932310638}
   m_Layer: 0
   m_Name: NonVR_Player
   m_TagString: Untagged
@@ -1241,7 +1253,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 0
   reliableMode: 0
@@ -1273,18 +1285,6 @@ MonoBehaviour:
   trySamplingRateMatch: 0
   useMicrophoneTypeFallback: 0
   recordOnlyWhenJoined: 1
---- !u!114 &1300663175932310638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6138799595986503410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f6de059ca5e864d883815f514644d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6477839932699085274
 GameObject:
   m_ObjectHideFlags: 0
