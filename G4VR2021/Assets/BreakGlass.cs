@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BreakGlass : MonoBehaviour
 {
-    AudioSource Glass;
+    public AudioClip BreakingGlass;
+    
     public int Hp=30;
     // Start is called before the first frame update
     void Awake()
@@ -15,7 +16,6 @@ public class BreakGlass : MonoBehaviour
     void start()
     {
         
-        Glass.Stop();
     }
 
     // Update is called once per frame
@@ -23,10 +23,11 @@ public class BreakGlass : MonoBehaviour
     {
         if(Hp<=0)
         {
-            Glass= GetComponent<AudioSource>();
-            Glass.Play();
+            
             Debug.Log("Glass crushed");
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(BreakingGlass,Vector3.zero);
+            
         }
     }
 }
