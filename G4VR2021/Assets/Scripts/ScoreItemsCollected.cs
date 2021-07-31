@@ -9,6 +9,11 @@ public class ScoreItemsCollected : MonoBehaviour
     public static void IncreaseScore(int pointsFromItem)
     {
         score += pointsFromItem;
-        Debug.Log(score);
+        Debug.Log("Score: " + score);
+    }
+
+    public static int GetScore()
+    {
+        return score;
     }
 }
