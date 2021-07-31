@@ -11,6 +11,8 @@ TagManager:
   - Potion
   - SecurityCameras
   - VaultLight
+  - nonVRCam
+  - Key
   layers:
   - Default
   - TransparentFX
