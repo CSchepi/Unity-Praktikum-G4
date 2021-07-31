@@ -8,6 +8,7 @@ public class VaultUnlockDrill : MonoBehaviour
     public float endAngle = 160f;
     public float openSpeed;
     public Transform hinge;
+    [SerializeField] GameObject Door;
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,16 +17,17 @@ public class VaultUnlockDrill : MonoBehaviour
         {
             Debug.Log("Open VAULT");
             Debug.Log(other.gameObject.name);
-            //var rb = GameObject.Find("vault_door").GetComponent<Rigidbody>();
-            //rb.isKinematic = false;
-            ToggleChest(startAngle, endAngle);
-            this.gameObject.SetActive(false);
+            
+            StartCoroutine(ToggleChest(startAngle, endAngle));
+
         }
     }
 
     IEnumerator ToggleChest(float angleStart, float angleEnd)
     {
         //audio.Play();
+
+        angleStart = Door.transform.eulerAngles.y;
 
         float time = 0f;
         while (time <= 1f)
@@ -34,13 +36,13 @@ public class VaultUnlockDrill : MonoBehaviour
             float angle = Mathf.Lerp(angleStart, angleEnd, time);
 
             //Get a copy of current Euler angles
-            Vector3 euler = hinge.eulerAngles;
+            Vector3 euler = Door.transform.eulerAngles;
 
             // Set current angle
             euler.y = angle;
 
             // Reapply Euler angles to transform
-            hinge.eulerAngles = euler;
+            Door.transform.eulerAngles = euler;
 
             // Increment time
             time = time + Time.deltaTime / openSpeed;
@@ -48,6 +50,7 @@ public class VaultUnlockDrill : MonoBehaviour
             yield return null;
 
         }
+
 
     }
 }
