@@ -41396,6 +41396,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1159927256163928779, guid: 4fa6a21768d7b0844afb850758f56e7e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1276575574975569799, guid: 4fa6a21768d7b0844afb850758f56e7e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -41708,7 +41712,9 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4677834981533103325, guid: 4fa6a21768d7b0844afb850758f56e7e, type: 3}
+    - {fileID: 1159927256163928779, guid: 4fa6a21768d7b0844afb850758f56e7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4fa6a21768d7b0844afb850758f56e7e, type: 3}
 --- !u!33 &8471762811869821237
 MeshFilter:
