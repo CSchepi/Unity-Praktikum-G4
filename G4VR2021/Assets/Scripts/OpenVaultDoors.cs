@@ -20,11 +20,12 @@ public class OpenVaultDoors : MonoBehaviour
 
     public Vector3 lever_end_pos;
 
-    float threshold = 0.0f;
+    public float threshold = 0.0f;
 
     public float openSpeed = 1f;
 
     private bool started = true;
+    public AudioSource audio1;
 
 
     public void Start()
@@ -43,14 +44,14 @@ public class OpenVaultDoors : MonoBehaviour
 
             if (offset > threshold)
             {
-
+                audio1.Play();
                 StartCoroutine(OpenDoor(door1_start_pos.x, door1_end_pos.x, door2_start_pos.x, door2_end_pos.x));
+
                 started = false;
 
             }
             if (offset < threshold)
             {
-                Debug.Log("went to offset <");
 
                 OpenDoor(door1_start_pos.x, door1_end_pos.x, door2_start_pos.x, door2_end_pos.x);
             }
@@ -63,7 +64,6 @@ public class OpenVaultDoors : MonoBehaviour
 
     IEnumerator OpenDoor(float position1_z_start, float position1_z_end, float position2_z_start, float position2_z_end)
     {
-        Debug.Log("openDoor");
 
         float time = 0f;
         while (time <= 1f)
@@ -90,8 +90,6 @@ public class OpenVaultDoors : MonoBehaviour
 
             // Increment time
             time = time + Time.deltaTime / openSpeed;
-            Debug.Log("and");
-            Debug.Log(time);
 
             yield return null;
 
