@@ -13,6 +13,7 @@ TagManager:
   - VaultLight
   - nonVRCam
   - Key
+  - Drill
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - InteractableItems
   - Player
-  - 
+  - SecCam
   - 
   - 
   - 
