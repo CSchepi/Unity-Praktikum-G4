@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2164136828338952875
 Transform:
   m_ObjectHideFlags: 0
@@ -1048,6 +1048,7 @@ MonoBehaviour:
   endAngle: 160
   openSpeed: 0
   hinge: {fileID: 0}
+  Door: {fileID: 0}
 --- !u!1 &8599659066627375069
 GameObject:
   m_ObjectHideFlags: 0
