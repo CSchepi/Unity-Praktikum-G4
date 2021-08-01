@@ -741,7 +741,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 3413842085568237829}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 1.1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
   unityMicrophoneDevice: 
-  photonMicrophoneDeviceId: 0
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
   debugEchoMode: 0
   reliableMode: 0
@@ -2117,6 +2117,7 @@ MonoBehaviour:
   WinScreen: {fileID: 297630399409559465}
   PauseScreen: {fileID: 5368249949622983136}
   LooseScreen: {fileID: 2487368624140519092}
+  menubuttonActionReference: {fileID: 0}
 --- !u!1 &3413842085607384709
 GameObject:
   m_ObjectHideFlags: 0
