@@ -54,7 +54,7 @@ public class UIVR : MonoBehaviour
     {
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(30.5*60);
+        yield return new WaitForSeconds(30.5f*60f);
 
         //After we have waited 5 seconds print the time again.
         LooseScreen.gameObject.SetActive(true);
