@@ -11,4 +11,9 @@ public class ScoreItemsCollected : MonoBehaviour
         score += pointsFromItem;
         Debug.Log(score);
     }
+
+    public static int getscore()
+    {
+        return score;
+    }
 }

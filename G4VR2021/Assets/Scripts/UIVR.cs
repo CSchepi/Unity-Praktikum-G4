@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.InputSystem;
 
 public class UIVR : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIVR : MonoBehaviour
     public GameObject WinScreen;
     public GameObject PauseScreen;
     public GameObject LooseScreen;
+    [SerializeField] private InputActionReference menubuttonActionReference;
     void Start()
     {
         Debug.Log("Erkannt");
@@ -18,16 +20,18 @@ public class UIVR : MonoBehaviour
         PauseScreen.gameObject.SetActive(false);
         LooseScreen.gameObject.SetActive(false);
         StartCoroutine(LooseTimer());
+        menubuttonActionReference.action.performed += Menubutton;
 
     }
 
     // Update is called once per frame
+
+    private void Menubutton(InputAction.CallbackContext obj)
+    {
+        PauseScreen.gameObject.SetActive(true);
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseScreen.gameObject.SetActive(true);
-        }
 
         if (!WinCube.active && !WinScreen.gameObject.active)
         {
@@ -37,7 +41,7 @@ public class UIVR : MonoBehaviour
 
     public void leave()
     {
-        PhotonNetwork.LoadLevel("MainMenue");
+        PhotonNetwork.LoadLevel("mainmenue");
         PhotonNetwork.LeaveRoom();
     }
 
@@ -50,7 +54,7 @@ public class UIVR : MonoBehaviour
     {
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(16*60);
+        yield return new WaitForSeconds(21*60);
 
         //After we have waited 5 seconds print the time again.
         LooseScreen.gameObject.SetActive(true);
