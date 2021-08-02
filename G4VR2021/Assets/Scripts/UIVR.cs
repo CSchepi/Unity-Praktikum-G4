@@ -53,14 +53,8 @@ public class UIVR : MonoBehaviour
     IEnumerator LooseTimer()
     {
 
-        //yield on a new YieldInstruction that waits for 5 seconds.
-<<<<<<< Updated upstream
-        yield return new WaitForSeconds(30.5f*60f);
-=======
-        yield return new WaitForSeconds(1830);
->>>>>>> Stashed changes
 
-        //After we have waited 5 seconds print the time again.
+        yield return new WaitForSeconds(1830);
         LooseScreen.gameObject.SetActive(true);
     }
 
